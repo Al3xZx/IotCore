@@ -30,8 +30,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<log4j.version>2.24.3</log4j.version>
-<!--		<alexa.ask.version>2.86.0</alexa.ask.version>-->
-		<alexa.ask.version>2.29.0</alexa.ask.version>
+		<alexa.ask.version>2.86.0</alexa.ask.version>
 	</properties>
 	<dependencies>
 		<dependency>

@@ -1,7 +1,7 @@
 package com.github.al3xzx.iotcore.alexa.servlet;
 
 import com.amazon.ask.Skill;
-import com.amazon.ask.Skills;
+import com.amazon.ask.builder.CustomSkillBuilder;
 import com.amazon.ask.servlet.SkillServlet;
 import com.github.al3xzx.iotcore.alexa.handlers.*;
 import com.github.al3xzx.iotcore.alexa.interceptors.request.LocalizationRequestInterceptor;
@@ -16,7 +16,8 @@ public class AlexaServlet extends SkillServlet {
     }
 
     private static Skill getSkill() {
-        return Skills.standard()
+        CustomSkillBuilder sb = new CustomSkillBuilder();
+        return sb
                 .addRequestHandlers(
                         new CancelandStopIntentHandler(),
                         new HelloWorldIntentHandler(),
