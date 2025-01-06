@@ -9,31 +9,32 @@ import com.github.al3xzx.iotcore.alexa.interceptors.request.LogRequestIntercepto
 import com.github.al3xzx.iotcore.alexa.interceptors.response.LogResponseInterceptor;
 
 
-public class AlexaServlet extends SkillServlet {
+public class AlexaServlet /*extends SkillServlet*/ {
 
-    public AlexaServlet() {
-        super(getSkill());
-    }
-
-    private static Skill getSkill() {
-        CustomSkillBuilder sb = new CustomSkillBuilder();
-        return sb
-                .addRequestHandlers(
-                        new CancelandStopIntentHandler(),
-                        new HelloWorldIntentHandler(),
-                        new HelpIntentHandler(),
-                        new LaunchRequestHandler(),
-                        new SessionEndedRequestHandler(),
-                        new FallbackIntentHandler(),
-                        new ErrorHandler())
-                .addExceptionHandler(new MyExceptionHandler())
-                .addRequestInterceptors(
-                        new LogRequestInterceptor(),
-                        new LocalizationRequestInterceptor())
-                .addResponseInterceptors(new LogResponseInterceptor())
-                // Add your skill id below
-                //.withSkillId("[unique-value-here]")
-                .build();
-    }
+//    public AlexaServlet() {
+//        super(getSkill());
+//    }
+//
+//    private static Skill getSkill() {
+//        CustomSkillBuilder sb = new CustomSkillBuilder();
+//        return sb
+//                .addRequestHandlers(
+//                        new CancelandStopIntentHandler(),
+//                        new HelloWorldIntentHandler(),
+//                        new SensorIntentHandler(),
+//                        new HelpIntentHandler(),
+//                        new LaunchRequestHandler(),
+//                        new SessionEndedRequestHandler(),
+//                        new FallbackIntentHandler(),
+//                        new ErrorHandler())
+//                .addExceptionHandler(new MyExceptionHandler())
+//                .addRequestInterceptors(
+//                        new LogRequestInterceptor(),
+//                        new LocalizationRequestInterceptor())
+//                .addResponseInterceptors(new LogResponseInterceptor())
+//                // Add your skill id below
+//                //.withSkillId("[unique-value-here]")
+//                .build();
+//    }
 
 }

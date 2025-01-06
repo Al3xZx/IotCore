@@ -7,22 +7,22 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.servlet.http.HttpServlet;
+//import javax.servlet.http.HttpServlet;
 
 
 @Configuration
 public class WebConfig {
-    @Bean
-    public ServletRegistrationBean<HttpServlet> alexaServlet() {
-
-        loadProperties();
-
-        ServletRegistrationBean<HttpServlet> servRegBean = new ServletRegistrationBean<>();
-        servRegBean.setServlet(new AlexaServlet());
-        servRegBean.addUrlMappings("/alexa/*");
-        servRegBean.setLoadOnStartup(1);
-        return servRegBean;
-    }
+//    @Bean
+//    public ServletRegistrationBean<HttpServlet> alexaServlet() {
+//
+//        loadProperties();
+//
+//        ServletRegistrationBean<HttpServlet> servRegBean = new ServletRegistrationBean<>();
+//        servRegBean.setServlet(new AlexaServlet());
+//        servRegBean.addUrlMappings("/alexa/*");
+//        servRegBean.setLoadOnStartup(1);
+//        return servRegBean;
+//    }
 
     private void loadProperties() {
         System.setProperty(ServletConstants.TIMESTAMP_TOLERANCE_SYSTEM_PROPERTY, PropertiesUtils.getPropertyValue(ServletConstants.TIMESTAMP_TOLERANCE_SYSTEM_PROPERTY));
