@@ -1,17 +1,14 @@
-package com.github.al3xzx.iotcore.model.entity;
-
+package com.github.al3xzx.iotcore.model.dto;
 
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import java.time.LocalDate;
 
 @Data
 @Builder
-public class User {
+public class UserDTO {
 
-    @Id
     private String id;
 
     private LocalDate creationDate;
